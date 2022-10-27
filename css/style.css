@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(156, 156, 156);
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+
+li a {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+
+
+li a:hover {
+    background-color: rgb(0, 153, 255);
+    border-radius: 4px;
+}
+
+.active {
+    background-color: rgb(207, 207, 207);
+    border-radius: 4px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.homeContenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.itemContenedor img {
+    height: 100%;
+    width: 100%;
+}
+
+.itemContenedor img:hover {
+    animation-name: crecer;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-in;
+
+}
+
+@keyframes crecer {
+    0% {
+        height: 100%;
+        width: 100%;
+    }
+
+    20% {
+        height: 110%;
+        width: 110%;
+    }
+
+    40% {
+        height: 100%;
+        width: 100%;
+    }
+
+    60% {
+        height: 115%;
+        width: 115%
+    }
+
+    80% {
+        height: 120%;
+        width: 120%
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.titulos {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 5vh;
+    color: grey;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.grid {
+    display: grid;
+    padding: 1em 4em;
+    grid-template-columns: 15% 15% 15% 55%;
+}
+
+.ordenarPrecio {
+    display: grid;
+    justify-content: end;
+}
+
+select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 2px solid grey;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+hr {
+    margin-top: 1vh;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.formulario__contacto {
+    display: flex;
+    justify-content: center;
+}
+
+input[type=email] {
+    width: 80%;
+    padding: 5px 5px;
+    margin-left: 2vh;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    border: 2px solid rgb(104, 106, 107);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 95%;
+    resize: none;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    box-sizing: border-box;
+    border: 2px solid rgb(104, 106, 107);
+    border-radius: 4px;
+}
+
+.formulario__contacto__btnenviar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 9vh;
+}
+
+input[type=submit] {
+    width: 4rem;
+    background-color: gray;
+    color: white;
+    padding: 8px 8px;
+    border-radius: 4px;
+    border: 2px solid rgb(104, 106, 107);
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(0, 153, 255);
+}
+
+footer {
+    background-color: rgb(156, 156, 156);
+    text-align: center;
+    margin-top: auto;
+    bottom: 0;
+}
+
+footer p {
+    float: right;
+}
+
+@media screen and (max-width:850px) {
+    nav ul {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .homeContenedor {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        gap: 4px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .titulos {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 5vh;
+        color: grey;
+        font-size: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    hr {
+        margin-top: 1vh;
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+
+    .formulario__contacto {
+        display: flex;
+        justify-content: center;
+    }
+
+    input[type=email] {
+        width: 57%;
+        padding: 5px 5px;
+        margin-left: 7vh;
+        margin-top: 9vh;
+        margin-bottom: 5vh;
+        border: 2px solid rgb(104, 106, 107);
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .formlario__contacto__label {
+        margin-left: 5vh;
+    }
+
+
+    textarea {
+        height: 24%;
+        width: 66%;
+        resize: none;
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+        margin-left: 5vh;
+        box-sizing: border-box;
+        border: 2px solid rgb(104, 106, 107);
+        border-radius: 4px;
+    }
+
+    .formulario__contacto__btnenviar {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 9vh;
+    }
+
+    input[type=submit]:hover {
+        background-color: rgb(0, 153, 255);
+    }
+
+}
