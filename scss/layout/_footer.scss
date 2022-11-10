@@ -1,0 +1,24 @@
+footer {
+    background-color: map-get($colores, color-fondonavfoot);
+    text-align: center;
+    margin-top: auto;
+    bottom: 0;
+
+    p {
+        float: right;
+    }
+
+    li a {
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        color: map-get($colores, color-lista);
+        padding: 14px 35px;
+        font-family: 'Times New Roman', Times, serif;
+
+        &:hover {
+            background-color: map-get($colores, color-position);
+            border-radius: 40px;
+        }
+    }
+}

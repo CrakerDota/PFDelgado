@@ -1,0 +1,36 @@
+header {
+    background-color: map-get($colores, color-fondonavfoot);
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+
+    nav {
+        width: 100%;
+    }
+
+    ul {
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-evenly;
+        list-style: none;
+    }
+
+    li a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: map-get($colores, color-lista);
+        padding: 14px 35px;
+        font-family: 'Times New Roman', Times, serif;
+
+        &:hover {
+            background-color: map-get($colores, color-position);
+            border-radius: 40px;
+        }
+    }
+}
+
+.active {
+    background-color: map-get($colores, color-active);
+    border-radius: 40px;
+}

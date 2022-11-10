@@ -1,0 +1,11 @@
+@mixin tamañoBody {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+}
+
+@mixin imagesResponsivas ($width, $height){
+    width: $width;
+    height: $height;
+}
+    
